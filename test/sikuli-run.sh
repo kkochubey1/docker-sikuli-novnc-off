@@ -21,13 +21,13 @@ open 'http://'$dockerhost_ip':6082'
 
 # Make Chrome as default browser
 docker exec sikuli_6082 bash -c 'sudo -E -i -u ubuntu bash -c \
-"export DISPLAY=:1; google-chrome --no-default-browser-check --nosandbox --make-default-browser&"'
+"export DISPLAY=:1; export TEMP=/tmp/; google-chrome --no-default-browser-check --nosandbox --make-default-browser&"'
 
 sleep 5
 
 # Start sikuli-ide and run test in parameter
 docker exec -t sikuli_6082 bash -c 'sudo -E -i -u ubuntu bash -c \
-"export DISPLAY=:1; cd /var/src/sikuli_scripts/ && /usr/bin/sikuli-ide -s -r '$@'"'
+"export DISPLAY=:1; export TEMP=/tmp/; cd /var/src/sikuli_scripts/ && /usr/bin/sikuli-ide -s -r '$@'"'
 
 # Clean up docker containers
 #docker stop sikuli_6081 || true

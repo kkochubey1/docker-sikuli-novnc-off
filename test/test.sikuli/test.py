@@ -10,7 +10,8 @@ Popen(["google-chrome",
             #"--proxy-server=http://proxy:8080", 
             "http://www.google.com?q=kkochubey1 sikuli novnc"])
 
-click("1449713909820.png")
+wait("1449725206241.png", FOREVER)
+click("1449725206241.png")
 
 click("kkochubevll.png")
 
