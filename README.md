@@ -22,7 +22,7 @@ Browse http://<docker-machine ip ...>:6080/vnc.html
 <img src="https://raw.github.com/fcwu/docker-ubuntu-vnc-desktop/master/screenshots/lxde.png" width=400/>
 
 
-Test
+Test (Mac)
 ```
 # Test sikuli edit script
 ./test/sikuli-edit.sh test/test.sikuli

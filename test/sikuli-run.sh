@@ -17,6 +17,7 @@ curl -Ls -o /dev/null 'http://'$dockerhost_ip':6082/redirect.html?width=1900&hei
 
 sleep 5
 
+# Open browser to watch execution. Comment next line if no need to see script running.
 open 'http://'$dockerhost_ip':6082'
 
 # Make Chrome as default browser
