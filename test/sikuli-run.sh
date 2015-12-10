@@ -18,9 +18,9 @@ curl -Ls -o /dev/null 'http://'$dockerhost_ip':6082/redirect.html?width=1900&hei
 sleep 5
 
 # Open browser to watch execution. Comment next line if no need to see script running.
-open 'http://'$dockerhost_ip':6082'
+#open 'http://'$dockerhost_ip':6082'
 
-# Make Chrome as default browser
+# TODO Workaround: Make Chrome as default browser
 docker exec sikuli_6082 bash -c 'sudo -E -i -u ubuntu bash -c \
 "export DISPLAY=:1; export TEMP=/tmp/; google-chrome --no-default-browser-check --nosandbox --make-default-browser&"'
 

@@ -19,7 +19,7 @@ sleep 5
 
 curl -Ls -o /dev/null 'http://'$dockerhost_ip':6081'
 
-# Make Chrome as default browser
+# TODO Workaound: Make Chrome as default browser
 docker exec sikuli_6081 bash -c 'sudo -E -i -u ubuntu bash -c \
  "export DISPLAY=:1; export TEMP=/tmp/; google-chrome --no-default-browser-check --nosandbox --make-default-browser&"'
 
