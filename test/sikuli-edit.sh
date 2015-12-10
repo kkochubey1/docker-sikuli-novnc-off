@@ -7,7 +7,7 @@ docker stop sikuli_6081 || true
 docker rm -f sikuli_6081 || true
 
 # Srart docker container with VNC session
-docker run -d --name sikuli_6081 -p 6081:6080 -p 5901:5901 -v /dev/shm:/dev/shm -v $(pwd):/var/src/sikuli_scripts kkochubey1/sikuli-novnc:latest
+docker run -d --name sikuli_6081 -p 6081:6080 -v /dev/shm:/dev/shm -v $(pwd):/var/src/sikuli_scripts kkochubey1/sikuli-novnc:latest
 
 sleep 5
 
@@ -27,7 +27,7 @@ sleep 5
 
 # Start sikuli-ide with smoke test opened for edit
 docker exec -t sikuli_6081 bash -c 'sudo -E -i -u ubuntu bash -c \
-"export DISPLAY=:1; export TEMP=/tmp/; cd /var/src/sikuli_scripts/; env; /usr/bin/sikuli-ide '$@'"'
+"export DISPLAY=:1; export TEMP=/tmp/; cd /var/src/sikuli_scripts/; /usr/bin/sikuli-ide '$@'"'
 
 # Clean up docker containers
 #docker stop sikuli_6081 || true
