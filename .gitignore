@@ -1,0 +1,19 @@
+log/
+.DS_Store
+*.sublime-*
+
+# Ignore sikuli runtime files
+*$py.class
+sikuli-scr-*
+test.html
+test.xml
+
+# Ignore Intellij project and settings
+.idea/
+*.iml
+*.ipr
+uploads
+logs
+
+# Ignore reportfolder
+report
